@@ -1,0 +1,12 @@
+{"timestamp":"2026-10-13T14:34:13.157Z","service":"inventory","transport":"gRPC","event":"listening","port":50051,"schema":"v2"}
+{"timestamp":"2026-10-13T14:34:13.368Z","service":"inventory","transport":"gRPC","operation":"Inventory.Reserve","sku":"SKU-AVAILABLE","quantity":2,"delayMs":0}
+{"timestamp":"2026-10-13T14:34:13.389Z","service":"inventory","transport":"gRPC","operation":"Inventory.Reserve","sku":"SKU-LIMITED","quantity":2,"delayMs":0}
+{"timestamp":"2026-10-13T14:34:13.400Z","service":"inventory","transport":"gRPC","operation":"Inventory.Reserve","sku":"SKU-AVAILABLE","quantity":2,"delayMs":900}
+{"timestamp":"2026-10-13T14:34:13.917Z","service":"inventory","transport":"gRPC","operation":"Inventory.Reserve","sku":"SKU-AVAILABLE","quantity":2,"delayMs":900}
+{"timestamp":"2026-10-13T14:34:14.434Z","service":"inventory","transport":"gRPC","operation":"Inventory.Reserve","sku":"SKU-AVAILABLE","quantity":2,"delayMs":900}
+{"timestamp":"2026-10-13T14:34:14.941Z","service":"inventory","transport":"gRPC","operation":"Inventory.Reserve","sku":"SKU-AVAILABLE","quantity":2,"delayMs":900}
+{"timestamp":"2026-10-13T14:34:15.454Z","service":"inventory","transport":"gRPC","operation":"Inventory.Reserve","sku":"SKU-AVAILABLE","quantity":2,"delayMs":900}
+{"timestamp":"2026-10-13T14:34:16.153Z","service":"inventory","transport":"gRPC","operation":"Inventory.Reserve","sku":"SKU-AVAILABLE","quantity":2,"delayMs":0}
+{"timestamp":"2026-10-13T14:34:16.311Z","service":"inventory","transport":"gRPC","operation":"Inventory.Reserve","sku":"SKU-AVAILABLE","quantity":2,"delayMs":0}
+{"timestamp":"2026-10-13T14:34:16.690Z","service":"inventory","transport":"gRPC","event":"listening","port":50051,"schema":"v1"}
+{"timestamp":"2026-10-13T14:34:16.857Z","service":"inventory","transport":"gRPC","operation":"Inventory.Reserve","sku":"SKU-AVAILABLE","quantity":2,"delayMs":0}

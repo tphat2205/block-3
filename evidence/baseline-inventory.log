@@ -1,0 +1,3 @@
+{"timestamp":"2026-10-13T14:34:12.762Z","service":"inventory","transport":"REST","event":"listening","port":4001}
+{"timestamp":"2026-10-13T14:34:13.001Z","service":"inventory","transport":"REST","operation":"POST /reservations","sku":"SKU-AVAILABLE","quantity":2,"delayMs":0}
+{"timestamp":"2026-10-13T14:34:13.016Z","service":"inventory","transport":"REST","operation":"POST /reservations","sku":"SKU-LIMITED","quantity":2,"delayMs":0}

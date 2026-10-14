@@ -1,0 +1,218 @@
+{
+  "decision": "Fixture stock is deterministic and does not decrement between requests.",
+  "baseline": {
+    "success": {
+      "label": "available",
+      "timestamp": "2026-10-13T14:34:12.942Z",
+      "elapsedMs": 69,
+      "status": 201,
+      "body": {
+        "orderId": "ord-1472d672-1850-41c4-ade0-6fd6a22c8ce0",
+        "reservationId": "res-9566a460-3c0c-417b-905e-d7f2575f8d97"
+      }
+    },
+    "shortage": {
+      "label": "out-of-stock",
+      "timestamp": "2026-10-13T14:34:13.013Z",
+      "elapsedMs": 5,
+      "status": 409,
+      "body": {
+        "error": "out_of_stock"
+      }
+    }
+  },
+  "grpc": {
+    "success": {
+      "label": "available",
+      "timestamp": "2026-10-13T14:34:13.347Z",
+      "elapsedMs": 40,
+      "status": 201,
+      "body": {
+        "orderId": "ord-29452ab4-41e1-4908-8343-7d3a7dd9ff2b",
+        "reservationId": "res-f9525fe4-493c-4ea3-8dd6-f3643e27c855"
+      }
+    },
+    "shortage": {
+      "label": "out-of-stock",
+      "timestamp": "2026-10-13T14:34:13.388Z",
+      "elapsedMs": 11,
+      "status": 409,
+      "body": {
+        "error": "out_of_stock"
+      }
+    },
+    "slowInventoryRuns": [
+      {
+        "label": "slow-inventory",
+        "timestamp": "2026-10-13T14:34:13.399Z",
+        "elapsedMs": 515,
+        "status": 504,
+        "body": {
+          "error": "inventory_timeout"
+        }
+      },
+      {
+        "label": "slow-inventory",
+        "timestamp": "2026-10-13T14:34:13.914Z",
+        "elapsedMs": 519,
+        "status": 504,
+        "body": {
+          "error": "inventory_timeout"
+        }
+      },
+      {
+        "label": "slow-inventory",
+        "timestamp": "2026-10-13T14:34:14.432Z",
+        "elapsedMs": 507,
+        "status": 504,
+        "body": {
+          "error": "inventory_timeout"
+        }
+      },
+      {
+        "label": "slow-inventory",
+        "timestamp": "2026-10-13T14:34:14.940Z",
+        "elapsedMs": 510,
+        "status": 504,
+        "body": {
+          "error": "inventory_timeout"
+        }
+      },
+      {
+        "label": "slow-inventory",
+        "timestamp": "2026-10-13T14:34:15.450Z",
+        "elapsedMs": 515,
+        "status": 504,
+        "body": {
+          "error": "inventory_timeout"
+        }
+      }
+    ],
+    "slowInventoryTiming": {
+      "count": 5,
+      "medianMs": 515,
+      "minMs": 507,
+      "maxMs": 519
+    },
+    "legacyClient": {
+      "clientVersion": "order-client-proto-v1",
+      "artifactSha256": "7b781e4bc3af692f55dd9c3e6cf4bd311eb3707a930a39b864d94b487c931f78",
+      "result": {
+        "reserved": true,
+        "reservationId": "res-7801848d-042f-4993-8a6a-4bd8ccebb1d3"
+      }
+    },
+    "currentClient": {
+      "clientVersion": "order-client-proto-v2",
+      "reserved": true,
+      "available": 10,
+      "availableState": "present"
+    },
+    "inventoryUnavailableRuns": [
+      {
+        "label": "inventory-unavailable",
+        "timestamp": "2026-10-13T14:34:16.515Z",
+        "elapsedMs": 23,
+        "status": 503,
+        "body": {
+          "error": "inventory_unavailable"
+        }
+      },
+      {
+        "label": "inventory-unavailable",
+        "timestamp": "2026-10-13T14:34:16.538Z",
+        "elapsedMs": 3,
+        "status": 503,
+        "body": {
+          "error": "inventory_unavailable"
+        }
+      },
+      {
+        "label": "inventory-unavailable",
+        "timestamp": "2026-10-13T14:34:16.540Z",
+        "elapsedMs": 2,
+        "status": 503,
+        "body": {
+          "error": "inventory_unavailable"
+        }
+      },
+      {
+        "label": "inventory-unavailable",
+        "timestamp": "2026-10-13T14:34:16.542Z",
+        "elapsedMs": 1,
+        "status": 503,
+        "body": {
+          "error": "inventory_unavailable"
+        }
+      },
+      {
+        "label": "inventory-unavailable",
+        "timestamp": "2026-10-13T14:34:16.544Z",
+        "elapsedMs": 2,
+        "status": 503,
+        "body": {
+          "error": "inventory_unavailable"
+        }
+      }
+    ],
+    "inventoryUnavailableTiming": {
+      "count": 5,
+      "medianMs": 2,
+      "minMs": 1,
+      "maxMs": 23
+    },
+    "currentClientAgainstOldServer": {
+      "clientVersion": "order-client-proto-v2",
+      "reserved": true,
+      "available": null,
+      "availableState": "absent"
+    }
+  },
+  "payload": {
+    "definition": "Serialized application message bytes; excludes transport framing, headers, and network overhead.",
+    "request": {
+      "sku": "SKU-AVAILABLE",
+      "quantity": 2
+    },
+    "restJsonUtf8Bytes": 36,
+    "grpcProtobufSerializedBytes": 17,
+    "grpcProtobufHex": "0a0d534b552d415641494c41424c451002"
+  },
+  "browserPage": {
+    "status": 200,
+    "htmlTitlePresent": true
+  },
+  "snapshots": {
+    "baseline": {
+      "success": {
+        "status": 201,
+        "body": {
+          "orderId": "<ORDER_ID>",
+          "reservationId": "<RESERVATION_ID>"
+        }
+      },
+      "shortage": {
+        "status": 409,
+        "body": {
+          "error": "out_of_stock"
+        }
+      }
+    },
+    "grpc": {
+      "success": {
+        "status": 201,
+        "body": {
+          "orderId": "<ORDER_ID>",
+          "reservationId": "<RESERVATION_ID>"
+        }
+      },
+      "shortage": {
+        "status": 409,
+        "body": {
+          "error": "out_of_stock"
+        }
+      }
+    }
+  },
+  "capturedAt": "2026-10-13T14:34:16.961Z"
+}

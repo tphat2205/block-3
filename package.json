@@ -1,0 +1,22 @@
+{
+  "name": "block-03-rest-grpc-assignment",
+  "version": "1.0.0",
+  "private": true,
+  "description": "REST boundary with a REST baseline and a gRPC internal Inventory service",
+  "scripts": {
+    "generate:v1": "node scripts/generate.js v1 && node scripts/build-legacy.js",
+    "generate:v2": "node scripts/generate.js v2",
+    "generate": "npm run generate:v2",
+    "inventory:rest": "node src/inventory-rest.js",
+    "inventory:grpc": "node src/inventory-grpc.js",
+    "order:rest": "node src/order-api.js rest",
+    "order:grpc": "node src/order-api.js grpc",
+    "demo": "node scripts/demo.js"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.13.4",
+    "@grpc/proto-loader": "^0.7.13",
+    "express": "^5.1.0",
+    "protobufjs": "^7.5.4"
+  }
+}

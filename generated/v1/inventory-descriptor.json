@@ -1,0 +1,40 @@
+{
+  "nested": {
+    "inventory": {
+      "nested": {
+        "Inventory": {
+          "methods": {
+            "Reserve": {
+              "requestType": "ReserveRequest",
+              "responseType": "ReserveReply"
+            }
+          }
+        },
+        "ReserveRequest": {
+          "fields": {
+            "sku": {
+              "type": "string",
+              "id": 1
+            },
+            "quantity": {
+              "type": "int32",
+              "id": 2
+            }
+          }
+        },
+        "ReserveReply": {
+          "fields": {
+            "reserved": {
+              "type": "bool",
+              "id": 1
+            },
+            "reservationId": {
+              "type": "string",
+              "id": 2
+            }
+          }
+        }
+      }
+    }
+  }
+}

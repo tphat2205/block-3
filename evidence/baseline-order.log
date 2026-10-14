@@ -1,0 +1,3 @@
+{"timestamp":"2026-10-13T14:34:12.941Z","service":"order-api","transport":"REST","event":"listening","port":3000,"deadlineMs":500}
+{"timestamp":"2026-10-13T14:34:12.974Z","service":"order-api","transport":"REST","operation":"Reserve","sku":"SKU-AVAILABLE","quantity":2,"deadlineMs":null}
+{"timestamp":"2026-10-13T14:34:13.015Z","service":"order-api","transport":"REST","operation":"Reserve","sku":"SKU-LIMITED","quantity":2,"deadlineMs":null}
